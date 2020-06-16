@@ -12,7 +12,7 @@
 
 !if $(TARGET) != NOOPT
 #  DEFINE FD_SIZE_IN_MB    = 2
-  DEFINE FD_SIZE_IN_MB    = 16
+  DEFINE FD_SIZE_IN_MB    = 32
 !else
   DEFINE FD_SIZE_IN_MB    = 3
 !endif
@@ -25,9 +25,9 @@
   DEFINE FD_SIZE          = 0x300000
   DEFINE FD_NUM_BLOCKS    = 0x300
 !endif
-!if $(FD_SIZE_IN_MB) == 16
-  DEFINE FD_SIZE          = 0x1000000
-  DEFINE FD_NUM_BLOCKS    = 0x1000
+!if $(FD_SIZE_IN_MB) == 32
+  DEFINE FD_SIZE          = 0x2000000
+  DEFINE FD_NUM_BLOCKS    = 0x2000
 !endif
 
 [BuildOptions.common.EDKII.DXE_CORE,BuildOptions.common.EDKII.DXE_DRIVER,BuildOptions.common.EDKII.UEFI_DRIVER,BuildOptions.common.EDKII.UEFI_APPLICATION]
