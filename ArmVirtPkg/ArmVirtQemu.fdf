@@ -27,8 +27,8 @@
 !if $(FD_SIZE_IN_MB) == 3
   DEFINE FVMAIN_COMPACT_SIZE  = 0x2ff000
 !endif
-!if $(FD_SIZE_IN_MB) == 16
-  DEFINE FVMAIN_COMPACT_SIZE  = 0xfff000
+!if $(FD_SIZE_IN_MB) == 32
+  DEFINE FVMAIN_COMPACT_SIZE  = 0x1fff000
 !endif
 
 
