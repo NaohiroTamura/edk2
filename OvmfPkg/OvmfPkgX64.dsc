@@ -64,10 +64,10 @@
 !ifdef $(FD_SIZE_4MB)
   DEFINE FD_SIZE_IN_KB           = 4096
 !else
-!ifdef $(FD_SIZE_8MB)
-  DEFINE FD_SIZE_IN_KB           = 8192
+!ifdef $(FD_SIZE_16MB)
+  DEFINE FD_SIZE_IN_KB           = 16384
 !else
-  DEFINE FD_SIZE_IN_KB           = 8192
+  DEFINE FD_SIZE_IN_KB           = 16384
 !endif
 !endif
 !endif
@@ -487,7 +487,7 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdVariableStoreSize|0xe000
 !endif
 !endif
-!if ($(FD_SIZE_IN_KB) == 4096) || ($(FD_SIZE_IN_KB) == 8192)
+!if ($(FD_SIZE_IN_KB) == 4096) || ($(FD_SIZE_IN_KB) == 16384)
   gEfiMdeModulePkgTokenSpaceGuid.PcdMaxVariableSize|0x8400
   gEfiMdeModulePkgTokenSpaceGuid.PcdMaxAuthVariableSize|0x8400
 !if $(NETWORK_TLS_ENABLE) == FALSE
